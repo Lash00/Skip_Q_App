@@ -1,34 +1,39 @@
 import Feature from "./Feature";
+import AllServices from "../../assets/lottie/Services.json";
+import SmartQueue from "../../assets/lottie/Waiting_Queue.json";
+import clearServieces from "../../assets/lottie/Clear_services.json";
+import EasyApp from "../../assets/lottie/Happy_customer_after_buying_product.json";
+
 const featuresData = [
   {
     title: "All Services in One Place",
     description:
       "You can access all services—banks, civil registry, and more—through a single app, without switching between apps.",
-    videoSrc: "",
+    videoSrc: AllServices,
   },
   {
     title: "Smart Queue Management",
     description:
       "See the queue in real time, know the waiting time, and reserve your spot before going, reducing crowding.",
-    videoSrc: "",
+    videoSrc: SmartQueue,
   },
   {
     title: "Clear Services for Each Provider",
     description:
       "Each provider shows its services simply, like ATMs or official document issuance. Find what you need quickly.",
-    videoSrc: "",
+    videoSrc: clearServieces,
   },
   {
     title: "Easy App Expansion",
     description:
       "If new providers are added, the app can handle them quickly without any problems.",
-    videoSrc: "",
+    videoSrc: EasyApp,
   },
 ];
 
 function Features() {
   return (
-    <div className="max-w-7xl mx-auto py-12">
+    <div className="container">
       {featuresData.map((feature, index) => (
         <Feature
           key={index}

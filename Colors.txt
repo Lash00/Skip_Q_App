@@ -1,0 +1,7 @@
+black : #111714;
+green:#36e27b;
+white:#ffffff;
+yellow:#d1a220;
+red:#c93d3c;
+dark-green:#18472b;
+gray:#9db6a7;
