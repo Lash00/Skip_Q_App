@@ -36,10 +36,10 @@ let data = [
 
 export default function Branding() {
   return (
-    <section className="container mt-3 ">
+    <section className="container mt-3 " id="go_to_servieces">
       <div className="Header-section">
         <h2 className="main-text-color text-center mb-4">
-          What are you heading{" "}
+          What are you heading Serviece
         </h2>
 
         <hr

@@ -7,12 +7,18 @@
   --ligth-gray: #9db6a7;
   --main-text-color: #fff;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* start global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: cursive;
+}
+.bg-light-green {
+  background-color: #c7f1d3 !important;
 }
 .border-15 {
   border-radius: 15px !important;
@@ -45,7 +51,9 @@ i:hover {
 }
 
 .main-shadow {
-  box-shadow: 0px 10px 20px #4d644d, 0px -10px 20px #4d644d;
+  box-shadow:
+    0px 10px 20px #4d644d,
+    0px -10px 20px #4d644d;
 }
 nav ul li,
 .toggel {
@@ -68,12 +76,13 @@ nav ul li:hover {
 }
 /* statr the landing  */
 
-.fade-text {
+/* ********************************** start the animation of the text  */
+/* .fade-text {
   opacity: 0;
   animation: fadeInOut 4s infinite;
-}
+} */
 
-@keyframes fadeInOut {
+/* @keyframes fadeInOut {
   0% {
     opacity: 0;
   }
@@ -86,7 +95,8 @@ nav ul li:hover {
   100% {
     opacity: 0;
   }
-}
+} */
+/* ********************************** end the animation of the text  */
 
 /* start Branding section  */
 hr {
@@ -135,4 +145,81 @@ footer ul {
 
 .floating-lottie:hover {
   transform: rotate(0deg) scale(1.1);
+}
+
+/* ****************************************************** splach screen  */
+.splash {
+  position: fixed;
+  inset: 0;
+  /* background: rgb(199, 241, 211); */
+  background: black;
+  color: rgb(199, 241, 211);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* الصف النهائي */
+.logo-row {
+  display: flex;
+  align-items: center;
+}
+
+/* اللوجو */
+.splach-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+
+  animation:
+    logoUp 0.8s ease-out forwards,
+    logoRotateMove 1.2s ease-in-out forwards;
+
+  animation-delay: 0s, 0.8s;
+}
+
+/* الاسم */
+.brand-name {
+  /* margin-left: 10px; */
+  font-size: 32px;
+  font-weight: bold;
+  white-space: nowrap;
+
+  opacity: 0;
+  animation: textUpRight 0.8s ease forwards;
+}
+
+/* من تحت لفوق */
+@keyframes logoUp {
+  from {
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* روتيت + شمال */
+@keyframes logoRotateMove {
+  from {
+    transform: rotate(0deg) translateX(0);
+  }
+  to {
+    transform: rotate(360deg) translateX(-110px);
+  }
+}
+
+/* الكلام يطلع من تحت ويمشي يمين */
+@keyframes textUpRight {
+  from {
+    opacity: 0;
+    transform: translate(-20px, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
